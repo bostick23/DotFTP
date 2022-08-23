@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DotFTP</AssemblyName>
+    <RootNamespace>DotFTP</RootNamespace>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>DotFTP</Title>
+    <Authors>Sistemi Tre s.r.l.</Authors>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SSH.NET" Version="2020.0.2" />
+  </ItemGroup>
+
+</Project>
