@@ -7,9 +7,9 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>DotFTP</Title>
     <Authors>Sistemi Tre s.r.l.</Authors>
-    <AssemblyVersion>2.0.0</AssemblyVersion>
-    <FileVersion>2.0.0</FileVersion>
-    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
+    <Version>2.0.1</Version>
     <Description>Client FTP / SFTP basato su .NET Standard</Description>
     <Copyright>2022</Copyright>
     <PackageProjectUrl>https://www.sistemitre.it/</PackageProjectUrl>

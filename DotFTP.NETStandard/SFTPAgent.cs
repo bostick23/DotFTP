@@ -609,18 +609,20 @@ namespace DotFTP
                                         user,
                                         new PasswordAuthenticationMethod(user, pass),
                                         new PrivateKeyAuthenticationMethod("rsa.key"));
+                fileCount = 0;
                 using (var client = new SftpClient(connectionInfo))
                 {
                     client.Connect();
                     var list = client.ListDirectory(path);
-                    fileCount = list != null ? list.Count() : 0;
-                    if (fileCount > 0)
+                    if (list != null && list.Count() > 0)
                     {
-
                         foreach (SftpFile file in list)
                         {
                             if (!file.IsDirectory)
+                            {
+                                fileCount++;
                                 fileNameList.Add(file.Name);
+                            }
                         }
                     }
                 }
@@ -1179,7 +1181,9 @@ namespace DotFTP
         /// <returns></returns>
         public List<string> GetFiles(string host, int port, string path, string mask, string user, string pass)
         {
-            var stringArray = GetDirectoryContentEx(host, port, path, user, pass, out int fileCount);
+            string[] stringArray = GetDirectoryContentEx(host, port, path, user, pass, out int fileCount);
+            if (stringArray == null || stringArray.Length == 0)
+                return new List<string>();
             List<string> retVal = new List<string>();
             retVal.AddRange(stringArray);
             return retVal;
