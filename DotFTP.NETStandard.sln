@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotFTP.NETStandard", "DotFTP.NETStandard\DotFTP.NETStandard.csproj", "{50001632-2B20-4507-9ED7-112388349D3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFTP.Test", "DotFTP.Test\DotFTP.Test.csproj", "{1B7E005B-3D59-4DCD-9124-FC37D0DF330B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFtp.Test", "DotFtp.Test\DotFtp.Test.csproj", "{0B4349EC-5458-4281-93A8-495A6442519C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{50001632-2B20-4507-9ED7-112388349D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50001632-2B20-4507-9ED7-112388349D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50001632-2B20-4507-9ED7-112388349D3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B7E005B-3D59-4DCD-9124-FC37D0DF330B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B7E005B-3D59-4DCD-9124-FC37D0DF330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B7E005B-3D59-4DCD-9124-FC37D0DF330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B7E005B-3D59-4DCD-9124-FC37D0DF330B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4349EC-5458-4281-93A8-495A6442519C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4349EC-5458-4281-93A8-495A6442519C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4349EC-5458-4281-93A8-495A6442519C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4349EC-5458-4281-93A8-495A6442519C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
