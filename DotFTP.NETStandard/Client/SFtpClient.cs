@@ -33,6 +33,8 @@ namespace DotFTP.Client
         }
         private ConnectionInfo CreateConnectionInfo()
         {
+            if (Host.StartsWith("sftp://"))
+                Host = Host.Substring(7);
             string ftpHost = Host;
             ConnectionInfo connectionInfo;
             if (Port != null)
