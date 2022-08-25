@@ -94,3 +94,7 @@ using (IFtpClient client = new FtpClient("localhost", "username", "Password", 21
     { Console.WriteLine(ex.Message); }
 }
 ```
+
+## Consigli pratici
+1. L'host può essere specificato sia con il protocollo che senza, quindi è valido sia **_sftp://serverdomain.com_** che **_serverdomain.com_**
+2. Il path del server FTP deve essere assoluto, quindi partendo dalla root **_/_**
