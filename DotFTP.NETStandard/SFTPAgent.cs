@@ -9,6 +9,7 @@ using Renci.SshNet.Sftp;
 
 namespace DotFTP
 {
+    [Obsolete("Usare SFtpClient")]
     public class SFTPAgent : BaseFTPAgent, IFTPAgent
     {
         public SFTPAgent()

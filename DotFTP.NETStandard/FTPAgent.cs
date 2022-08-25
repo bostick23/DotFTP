@@ -8,9 +8,9 @@ using System.Text.RegularExpressions;
 
 namespace DotFTP
 {
+    [Obsolete ("Usare FtpClient")]
     public class FTPAgent : BaseFTPAgent, IFTPAgent
     {
-
         public FTPAgent()
         {
         }

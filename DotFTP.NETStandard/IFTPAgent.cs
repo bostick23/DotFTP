@@ -5,6 +5,7 @@ using System.Net;
 
 namespace DotFTP
 {
+    [Obsolete("Usare IFtpClient")]
     public interface IFTPAgent
     {
 
