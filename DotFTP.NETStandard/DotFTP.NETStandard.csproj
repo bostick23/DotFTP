@@ -7,23 +7,19 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>DotFTP</Title>
     <Authors>Sistemi Tre s.r.l.</Authors>
-    <AssemblyVersion>3.0.0</AssemblyVersion>
-    <FileVersion>3.0.0</FileVersion>
-    <Version>3.0.0</Version>
+    <AssemblyVersion>3.0.1</AssemblyVersion>
+    <FileVersion>3.0.1</FileVersion>
+    <Version>3.0.1</Version>
     <Description>Client FTP / SFTP basato su .NET Standard</Description>
-    <Copyright>2022</Copyright>
+    <Copyright>2024</Copyright>
     <PackageProjectUrl>https://www.sistemitre.it/</PackageProjectUrl>
-    <PackageIcon>logo.png</PackageIcon>
+    <PackageIcon></PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>FTP;SFTP</PackageTags>
-    <PackageReleaseNotes>Prima versione con supporto a .NET Standard</PackageReleaseNotes>
+    <PackageReleaseNotes>Added support of keyboard-interactive authentication method on SSH connection</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\Users\c.bosticco\Pictures\logo.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -31,8 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentFTP" Version="39.4.0" />
-    <PackageReference Include="SSH.NET" Version="2020.0.2" />
+    <PackageReference Include="FluentFTP" Version="52.0.0" />
+    <PackageReference Include="SSH.NET" Version="2024.2.0" />
   </ItemGroup>
 
 </Project>

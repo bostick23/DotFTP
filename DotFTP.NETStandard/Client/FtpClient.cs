@@ -21,10 +21,11 @@ namespace DotFTP.Client
         private FluentFTP.FtpClient CreateClient()
         {
             if (Port != null)
-                client = new FluentFTP.FtpClient(Host, Port.Value, Username, Password);
+                client = new FluentFTP.FtpClient(Host, Username, Password, Port.Value);
             else
                 client = new FluentFTP.FtpClient(Host, Username, Password);
-            client.ValidateAnyCertificate = true;
+            client.Config.EncryptionMode = FtpEncryptionMode.Auto;
+            client.Config.ValidateAnyCertificate = true;
             return client;
         }
         public void Connect()
