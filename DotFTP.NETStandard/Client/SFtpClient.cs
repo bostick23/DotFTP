@@ -37,11 +37,14 @@ namespace DotFTP.Client
                 Host = Host.Substring(7);
             string ftpHost = Host;
             ConnectionInfo connectionInfo;
+            KeyboardInteractiveAuthenticationMethod kauth = new KeyboardInteractiveAuthenticationMethod(Username);
+            kauth.AuthenticationPrompt += Kauth_AuthenticationPrompt;
             if (Port != null)
             {
                 connectionInfo = new ConnectionInfo(ftpHost, Port.Value,
                                         Username,
                                         new PasswordAuthenticationMethod(Username, Password),
+                                        kauth,
                                         new PrivateKeyAuthenticationMethod("rsa.key"));
             }
             else
@@ -49,10 +52,23 @@ namespace DotFTP.Client
                 connectionInfo = new ConnectionInfo(ftpHost,
                                         Username,
                                         new PasswordAuthenticationMethod(Username, Password),
+                                        kauth,
                                         new PrivateKeyAuthenticationMethod("rsa.key"));
             }
             return connectionInfo;
         }
+
+        private void Kauth_AuthenticationPrompt(object sender, Renci.SshNet.Common.AuthenticationPromptEventArgs e)
+        {
+            foreach (Renci.SshNet.Common.AuthenticationPrompt prompt in e.Prompts)
+            {
+                if (prompt.Request.IndexOf("Password:", StringComparison.InvariantCultureIgnoreCase) != -1)
+                {
+                    prompt.Response = Password;
+                }
+            }
+        }
+
         public List<string> GetDirectoryList(string path)
         {
             path = "/" + FtpHelper.CheckAndFixPath(path);
