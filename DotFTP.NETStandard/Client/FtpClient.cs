@@ -10,21 +10,21 @@ namespace DotFTP.Client
     public class FtpClient : BaseFtpClient, IFtpClient
     {
         private FluentFTP.FtpClient client;
-        public FtpClient(string host, string username, string password, int? port = null)
+        public FtpClient(string host, string username, string password, int? port = null, FtpEncryptionMode encryptionMode = FtpEncryptionMode.Auto)
         {
             Host = host;
             Username = username;
             Password = password;
             Port = port;
-            client = CreateClient();
+            client = CreateClient(encryptionMode);
         }
-        private FluentFTP.FtpClient CreateClient()
+        private FluentFTP.FtpClient CreateClient(FtpEncryptionMode encryptionMode = FtpEncryptionMode.Auto)
         {
             if (Port != null)
                 client = new FluentFTP.FtpClient(Host, Username, Password, Port.Value);
             else
                 client = new FluentFTP.FtpClient(Host, Username, Password);
-            client.Config.EncryptionMode = FtpEncryptionMode.Auto;
+            client.Config.EncryptionMode = encryptionMode;
             client.Config.ValidateAnyCertificate = true;
             return client;
         }

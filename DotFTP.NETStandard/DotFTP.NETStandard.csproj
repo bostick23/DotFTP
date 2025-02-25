@@ -7,16 +7,16 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>DotFTP</Title>
     <Authors>Sistemi Tre s.r.l.</Authors>
-    <AssemblyVersion>3.0.1</AssemblyVersion>
-    <FileVersion>3.0.1</FileVersion>
-    <Version>3.0.1</Version>
+    <AssemblyVersion>3.0.2</AssemblyVersion>
+    <FileVersion>3.0.2</FileVersion>
+    <Version>3.0.2</Version>
     <Description>Client FTP / SFTP basato su .NET Standard</Description>
-    <Copyright>2024</Copyright>
+    <Copyright>2025</Copyright>
     <PackageProjectUrl>https://www.sistemitre.it/</PackageProjectUrl>
     <PackageIcon></PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>FTP;SFTP</PackageTags>
-    <PackageReleaseNotes>Added support of keyboard-interactive authentication method on SSH connection</PackageReleaseNotes>
+    <PackageReleaseNotes>On FTP Agent is now possibile to specify FtpEncryptionMode</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
